@@ -1,3 +1,3 @@
 # LeetNotes
 
-Chrome extension to add leetcode notes to google sheet!
+Chrome extension to add leetcode notes to google sheet! :)
