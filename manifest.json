@@ -1,13 +1,13 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "LeetCode Notes",
     "description": "Chrome extension to add LeetCode coding solutions to Google Sheets",
     "version": "1.0.0",
     "icons": {
-      "16": "",
-      "32": "",
-      "48": "",
-      "128": ""
+      "16": "icons/16.png",
+      "32": "icons/38.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
     },
     "permissions": [
       "activeTab",
@@ -27,25 +27,15 @@
       }
     ],
     "background": {
-      "scripts": [
-        "background.js"
-      ],
-      "persistent": false
+      "service_worker": "background.js"
     },
-    "page_action": {
+    "action": {
       "default_icon": {
-        "16": "",
-        "32": "",
-        "48": "",
-        "128": ""
+        "16": "icons/16.png",
+        "32": "icons/38.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
       },
       "default_popup": "popup.html"
-    },
-    "oauth2": {
-      "client_id": "",
-      "scopes": [
-        "https://www.googleapis.com/auth/drive.file"
-      ]
     }
-  }
-  
+}
