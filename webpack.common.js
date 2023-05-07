@@ -7,7 +7,7 @@ const DotenvWebpackPlugin = require('dotenv-webpack');
 
 module.exports = {
   entry: {
-    popup: path.resolve('src/popup/popup.js'),
+    popup: path.resolve('src/popup/popup.jsx'),
     options: path.resolve('src/options/options.js'),
     background: path.resolve('src/background/background.js'),
     problemContent: path.resolve('src/contentScript/problemContent.js'),
@@ -16,12 +16,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/, // matches .js and .jsx files
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
